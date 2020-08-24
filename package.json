@@ -1,0 +1,35 @@
+{
+  "name": "@koalati/tool-browser-support",
+  "version": "1.0.0",
+  "description": "Koalati tool that checks a web page for browser support issues.",
+  "main": "tool.js",
+  "scripts": {
+    "test": "npx @koalati/dev-tool-tester --url=\"https://koalati.com/\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koalatiapp/tool-browser-support.git"
+  },
+  "keywords": [
+    "koalati"
+  ],
+  "author": {
+    "name": "Koalati",
+    "email": "info@koalati.com",
+    "url": "https://koalati.com"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/koalatiapp/tool-browser-support/issues"
+  },
+  "homepage": "https://github.com/koalatiapp/tool-browser-support#readme",
+  "devDependencies": {
+    "@koalati/dev-tool-tester": "^1.0.6"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "jscssp": "https://github.com/EmilePerron/jscssp/tarball/master",
+    "postcss": "^7.0.32",
+    "specificity": "^0.4.1"
+  }
+}
