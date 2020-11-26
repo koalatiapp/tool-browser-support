@@ -1,7 +1,7 @@
 'use strict';
 
 const DomStandardizer = require('./lib/dom-standardizer.js');
-const caniuseEquivalences = require('./config/caniuse-equivalences.json');
+const CssAnalyzer = require('./lib/analyzer/css.js');
 
 class Tool {
     constructor({ page, payload }) {
@@ -11,7 +11,10 @@ class Tool {
 
     async run() {
         const browserlistQuery = this.payload && this.payload.browserlistQuery ? this.payload.browserlistQuery : 'defaults';
-        const standardizedElements = await DomStandardizer.standardize(this.page, browserlistQuery);
+        const standardizedDomTree = await DomStandardizer.standardize(this.page, browserlistQuery);
+        const cssErrors = CssAnalyzer.analyze(standardizedDomTree[0]);
+
+        console.log(cssErrors);
     }
 
     get results() {
