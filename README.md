@@ -1,3 +1,7 @@
+**⚠️ WIP NOTICE:** This tool is a WIP, and therefore not completed or entirely functional at the moment.
+
+---
+
 # Browser support tool for Koalati
 
 This is the repository for Koalati's built-in Browser support tool. This tool analyzes webpages to find elements, CSS properties and scripts that might not work as expected on certain browsers.
